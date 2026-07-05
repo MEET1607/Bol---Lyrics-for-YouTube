@@ -35,8 +35,8 @@ exist elsewhere.
 **From source (load unpacked):**
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/bol.git
-cd bol
+git clone https://github.com/MEET1607/Bol---Lyrics-for-YouTube.git
+cd Bol---Lyrics-for-YouTube
 npm install
 npm run build
 ```
