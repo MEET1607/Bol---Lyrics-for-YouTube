@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Bol — Lyrics for YouTube",
+  "version": "1.0.0",
+  "description": "Accurate, beautifully synced lyrics for YouTube music — with romanization for Hindi, Punjabi, Tamil and more.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["storage"],
+  "host_permissions": ["https://lrclib.net/*", "https://music.163.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["content.css"],
+      "matches": ["https://www.youtube.com/*"]
+    }
+  ],
+  "action": {
+    "default_title": "Toggle Bol lyrics panel",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png"
+    }
+  }
+}
